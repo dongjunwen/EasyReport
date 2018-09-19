@@ -7,12 +7,13 @@ import javax.servlet.http.HttpServletResponse;
 import com.easytoolsoft.easyreport.membership.service.EventService;
 import com.easytoolsoft.easyreport.support.i18n.LocaleUtils;
 import com.easytoolsoft.easyreport.support.model.ResponseResult;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,10 +29,10 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Tom Deng
  * @date 2017-03-25
  */
-@Slf4j
 @Controller
 @RequestMapping(value = "/member")
 public class LoginController {
+    private static final Logger log= LoggerFactory.getLogger(LoginController.class);
     @Resource
     private EventService eventService;
 

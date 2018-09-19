@@ -38,7 +38,7 @@ import com.easytoolsoft.easyreport.meta.form.control.HtmlSelectOption;
 import com.easytoolsoft.easyreport.meta.form.control.HtmlTextBox;
 import com.easytoolsoft.easyreport.meta.service.ReportService;
 import com.easytoolsoft.easyreport.meta.service.TableReportService;
-import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
